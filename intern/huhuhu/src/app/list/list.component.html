@@ -1,0 +1,26 @@
+<hr>
+<form (submit)="add()">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><input type="number" name="" id="" placeholder="ID"></td>
+      <td><input type="text" name="newTitle" placeholder="Title"></td>
+      <td><input type="text" name="newDes" id="" placeholder="Descriptiom"></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="center"><button>Add</button></td>
+    </tr>
+  </table>
+</form>
+<hr>
+<ul>
+    <li *ngFor="let book of books">
+      <span>{{book.id}}</span> {{book.title}}
+    </li>
+  </ul>
+<hr>

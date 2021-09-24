@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { FormsModule } from '@angular/forms';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditComponent } from './edit/edit.component';
+import { AddnewbookComponent } from './addnewbook/addnewbook.component'; 
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     IndexComponent,
     TodoDetailComponent,
     DashboardComponent,
+    EditComponent,
+    AddnewbookComponent,
   ],
   imports: [
     BrowserModule,

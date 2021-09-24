@@ -1,9 +1,9 @@
 <div *ngIf="todo" align="center">
 
-    <h2>Book {{todo.name | uppercase}}</h2>
+    <h2>Book: {{todo.name | uppercase}}</h2>
     <div>
-      <label for="todo-name">Change book name </label>
-      <input no id="todo-name" [(ngModel)]="todo.name" placeholder="name">
+      <label for="todo-name">Book description: </label><br/><br/>
+      <span  id="todo-name">{{todo.des}}</span> 
     </div>
   
   </div>

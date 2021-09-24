@@ -1,4 +1,17 @@
+<hr>
 <h2>Top book</h2>
 <div class="todolist-menu">
     <a *ngFor="let todo of todolist" routerLink="/detail/{{todo.id}}">{{todo.name}}</a>
 </div>
+<hr>
+<h2>All books</h2>
+<table align="center">
+  <tr>
+    <th>ID <hr></th>
+    <th class="abc">Title <hr></th>
+  </tr>
+  <tr *ngFor="let todo of todos; let i = index">
+    <td style="text-align: center;">{{todo.id}}</td>
+    <td class="abc" routerLink="/detail/{{todo.id}}">{{todo.name}}</td>
+  </tr>
+</table>

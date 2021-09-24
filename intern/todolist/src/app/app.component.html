@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<span class="todo__number">I do {{remain()}} out of {{todos.length}}</span>
+<hr>
+<form (submit)="add()">
+  <span>Add new todo</span><br/>
+  <input type="text" name="newAdd"  [(ngModel)]="newAdd">
+  <button>Add</button>
+</form>
+<hr>
+<ul>
+  <li *ngFor="let t of todos; let i = index" >
+    <input type="checkbox" [(ngModel)]="t.done">
+    <input type="text"[(ngModel)]="t.name">
+    <button (click)="del(i)">Del</button>
+  </li>
+</ul>

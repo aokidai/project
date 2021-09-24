@@ -1,0 +1,25 @@
+<hr>
+<form (submit)="add()" class="formbook">
+  <table  align="center">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><input type="number" name="newId" id="" [(ngModel)] ="newID" placeholder="ID"></td>
+      <td><input type="text" name="newTitle" [(ngModel)] ="newTitle" placeholder="Title"></td>
+      <td><input type="text" name="newDes" id="" [(ngModel)] ="newDes" placeholder="Descriptiom"></td>
+    </tr>
+    <tr>
+      <td colspan="3" align="center"><button  style="color: white; background-color: red;" type="submit">Add</button></td>
+    </tr>
+  </table>
+  <br/>
+  <span style="margin-left: 40%; margin-top: 10p;">{{log}}</span>
+  <a routerLink="/todolist">Exit</a>
+  <div style="margin-left: 5%; color: red;"><br/>* ID was used:
+    <span *ngFor="let todo of todolist">{{todo.id}}, </span>. We can add new ID > ID was used or not match ID used.
+  </div>
+</form>

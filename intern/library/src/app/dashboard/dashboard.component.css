@@ -18,7 +18,7 @@ h2 {
   }
   
   a {
-    background-color: #3f525c;
+    background-color: blue;
     border-radius: 2px;
     padding: 1rem;
     font-size: 1.2rem;
@@ -45,5 +45,12 @@ h2 {
   }
   
   a:hover {
-    background-color: #000;
+    background-color: green;
   }
+
+  table tr #abc{
+    width: 100px;
+  }
+
+
+  

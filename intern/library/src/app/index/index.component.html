@@ -1,10 +1,18 @@
+<hr>
 <h2>All books</h2>
-<ul class="todolist">
-  <li *ngFor="let todo of todolist">
-      <a routerLink="/detail/{{todo.id}}">
-        <span class="badge">{{todo.id}}</span> {{todo.name}}
-      </a>
-  </li>
-</ul>
+<table align="center">
+  <tr>
+    <th>ID<hr></th>
+    <th style="width: 200px;">Title<hr></th>
+    <th>Edit<hr></th>
+    <th>Delete<hr></th>
+  </tr>
+  <tr *ngFor="let todo of todolist; let i = index">
+    <td>{{todo.id}}</td>
+    <td routerLink="/detail/{{todo.id}}">{{todo.name}}</td>
+    <td routerLink="/edit/{{todo.id}}"><span>Edit</span></td>
+    <td><button (click)="del(i)">Del</button></td>
+  </tr>
+</table>
 
   

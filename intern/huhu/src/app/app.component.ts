@@ -16,7 +16,7 @@ export class AppComponent {
   remain = function(this:any){
     let c = 0;
     this.todos.forEach((t: { done: any; }) => {
-      if(!t.done){
+      if(t.done){
         c++;
       }
     });
