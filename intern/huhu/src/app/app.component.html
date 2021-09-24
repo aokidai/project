@@ -1,19 +1,20 @@
 <h1>{{title}}</h1>
-
-{{remain()}} out of {{todos.length}}
+<span class="todo__number">I need to do {{remain()}} out of {{todos.length}}</span>
 <hr>
-<ul>
-  <li *ngFor="let t of todos; let i=index">
-    <input type="checkbox" name="" id="" [(ngModel)] ="t.done">
-    <input type="text" name="" id="" [(ngModel)] ="t.name">
-    <button (click)="del(i)">Del</button>
-  </li>
-</ul>
-<hr>
-<form action="" (submit)="add()">
-  <input type="text" name="newTodo" id="" [(ngModel)] ="newTodo">
+<span class="todo__add">Add new to do:</span>
+<form class="todo__add--form" action="" (submit)="add()" align="center">
+  <input type="text" name="newTodo" id="" [(ngModel)] ="newTodo" placeholder="Add new todo...">
   <button>
     Add
   </button>
-  
 </form>
+<hr>
+<span class="todo__add">To do list:</span>
+<ul class="todo__list" align="center">
+  <li *ngFor="let t of todos; let i=index">
+    <input class="todo__list--select" type="checkbox" name="" id="" [(ngModel)] ="t.done">
+    <input class="todo__list--text" type="text" name="" id="" [(ngModel)] ="t.name">
+    <button class="todo__list--btn" (click)="del(i)">Del</button>
+  </li>
+</ul>
+<hr>

@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    color: blue;
+}
+.todo__number{
+    font-size: 20px;
+    margin-left: 41.5%;
+    font-weight: bold;
+}
+.todo__add{
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 7%;
+}
+.todo__add--form{
+    padding: 10px;
+}
+.todo__list{
+    margin-right: 5%;
+    list-style-type:none;
+}

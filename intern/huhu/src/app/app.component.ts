@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'To do list';
+  title = 'TO DO LIST';
 
-  todos=[{name: 'first', done: false},
-         {name: 'second', done: true},
-         {name: 'third', done: false},
+  todos=[{name: 'Learn Angular', done: true},
+         {name: 'Learn Akita', done: false},
+         {name: 'Learn .Net', done: false},
   ];
-  newTodo = "";
+  
   remain = function(this:any){
-    let c =0;
+    let c = 0;
     this.todos.forEach((t: { done: any; }) => {
       if(!t.done){
         c++;
@@ -37,6 +37,7 @@ export class AppComponent {
     });
   };
 
+  newTodo = "";
   add = ()=>{
     const t = {name: this.newTodo, done: false };
     this.todos.push(t);
